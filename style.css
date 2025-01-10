@@ -1,0 +1,61 @@
+body {
+    background-color: #334967;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 20px;
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    background-color: #EEF1E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px #273850;
+}
+
+.play-button {
+    width: 230px;
+    height: 90px;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.markers {
+    cursor: pointer;
+    margin-top: 65px;
+}
+
+.text {
+    color: #FFFFFF;
+    font-family: 'Nunito', sans-serif;
+    font-size: 40;
+    font-weight: 900;
+    margin: 100px;
+    white-space: nowrap;
+}
