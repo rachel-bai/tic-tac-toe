@@ -3,34 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tic tac toe stylesheet</title>
+    <title>tic tac toe</title>
+    <style>
+        .page {
+            display: none;
+        }
+
+        /* Show the active section */
+        .active {
+            display: block;
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="main-container">
-        <div class="centered-container">
-            <img src="assets/cross.png" alt="Cross" class="markers">
-            <h1 class="text">PLAYER 1</h1>
-        </div>
-        <div class="centered-container">
-            <div class="grid">
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+        <div class="main-container">
+            <div class="centered-container">
+                <img src="assets/cross.png" alt="Cross" class="markers">
+                <h1 class="text">PLAYER 1</h1>
             </div>
-            <img src="assets/play-button.png" alt="Play" class="play-button">
-        </div>
-        <div class="centered-container">
-            <img src="assets/naught.png" alt="Naught" class="markers">
-            <h1 class="text">PLAYER 2</h1>
+            <div class="centered-container">
+                <div class="grid-landing">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+                <button id="play-button" class="button">PLAY</button>
+            </div>
+            <div class="centered-container">
+                <img src="assets/naught.png" alt="Naught" class="markers">
+                <h1 class="text">PLAYER 2</h1>
+            </div>
         </div>
     </div>
+
+    <!-- Game Page -->
+    <div id="game-page" class="page">
+        <div class="main-container">
+            <div class="centered-container">
+                <img src="assets/cross.png" alt="Cross" class="markers">
+                <h1 class="text">PLAYER 1</h1>
+            </div>
+            <div class="centered-container">
+                <div class="grid-playing">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+            </div>
+            <div class="centered-container">
+                <img src="assets/naught.png" alt="Naught" class="markers">
+                <h1 class="text">PLAYER 2</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Page -->
+     <div id="game-end" class="page">
+        <div class="main-container">
+            <div class="centered-container">
+                <img alt="Cross" class="markers">
+                <h1 class="text" style="margin-bottom: 0px;"></h1>
+                <h1 class="text" style="margin-top: 0px;">WON!</h1>
+            </div>
+        </div>
+     </div>
+    <script src="app.js"></script>
 </body>
 </html>
