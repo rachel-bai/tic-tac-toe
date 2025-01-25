@@ -5,11 +5,19 @@ const gameEnd = document.getElementById('game-end')
 
 // ELEMENTS
 const playButton = document.getElementById('play-button');
-const gridCells = document.querySelectorAll('.grid-playing .cell');
+const restartButton = document.getElementById('restart-button')
+const gridCells = document.querySelectorAll('#game-page .grid .cell');
+
+// TEXT
+const gamePlayText = document.querySelector('#game-page .centered-container:nth-of-type(2) .text')
 const gameEndText = document.querySelector('#game-end .text')
 const gameEndImg = document.querySelector('#game-end img')
+
+// IMAGES
 const naughtImg = 'assets/naught.png';
 const crossImg = 'assets/cross.png';
+
+// DATA
 const winCombos = [
   [0, 1, 2],
   [3, 4, 5],
@@ -55,6 +63,7 @@ function handleCellClick(event) {
 
   // switch to the other player
   currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+  gamePlayText.textContent = `PLAYER ${currentPlayer === 'X' ? '1' : '2'}'S TURN`;
 }
 
 function checkWinner() {
@@ -84,8 +93,12 @@ function resetGame() {
 
 // EVENT LISTENERS
 playButton.addEventListener('click', () => {
-    showPage(gamePage);
+  showPage(gamePage);
 });
+
+restartButton.addEventListener('click', () => {
+  showPage(landingPage);
+})
 
 gridCells.forEach((cell) => {
   cell.addEventListener('click', handleCellClick);
